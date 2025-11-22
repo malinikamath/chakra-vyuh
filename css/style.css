@@ -38,5 +38,6 @@ p:hover .hidden, p:focus .hidden {
     .textbox {
         color: white;
         background-color: black;
+        border: solid gray 10px;
     }
 }
