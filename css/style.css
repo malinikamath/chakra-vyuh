@@ -1,13 +1,18 @@
 /* keep body simple */
 body {
     text-align: center;
-    background-color: lightgray;
+    background-color: lightseagreen;
     display: grid;
-    height: 100vh;
     margin: 0;
     place-items: center;
     font-size: larger;
     font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+    display: inline-block;
+   height: auto; 
+   max-width: 50vw;
 }
 
 /* style textboxes */
@@ -22,9 +27,11 @@ body {
 
 /* style notebook */
 #notebook {
-    padding: 0.5vh;
+    display: inline-block;
+    text-align: center;
     margin: 0 auto;
-    width: 50vh;
+    width: 50vw;
+    height: auto;
 }
 
   /* caption */
@@ -37,11 +44,11 @@ body {
   }
 
   /* hide elements */
-.hidden {
+.hidden, .hidden_text {
     visibility: hidden;
     padding: 1vh;
 }
-p:hover .hidden, p:focus .hidden {
+p:hover .hidden_text, p:focus .hidden_text {
     visibility: visible;
 }
 
@@ -70,12 +77,12 @@ p:hover .hidden, p:focus .hidden {
         border-color: white;
     }
     body {
-        background-color: darkslategray;
+        background-color: rgb(1, 72, 72);
     }
 }
 
-
-@media screen and (max-width: 770px) {
+/* hide certain content from laptop */
+@media screen and (max-width: 600px) {
     .hidden {
         visibility: visible;
     }
