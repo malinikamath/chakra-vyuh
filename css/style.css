@@ -1,3 +1,4 @@
+/* keep body simple */
 body {
     text-align: center;
     background-color: lightgray;
@@ -9,7 +10,8 @@ body {
     font-family: 'Courier New', 'Arial Narrow', Arial, sans-serif;
 }
 
-.textbox {
+/* style textboxes */
+.textbox, .lb-data .lb-caption {
     background-color: white;
     color: black;
     padding: 1vh;
@@ -18,6 +20,23 @@ body {
     margin: 3vh;
 }
 
+/* style notebook */
+#notebook {
+    padding: 0.5vh;
+    margin: 0 auto;
+    width: 50vh;
+}
+
+  /* caption */
+  .lb-data .lb-caption {
+    display: block;
+    font-size: larger;
+    padding: 4vh;
+    text-align: center;
+    font-family: 'Lucida Handwriting', 'Segoe Script', 'Courier New', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  /* hide elements */
 .hidden {
     visibility: hidden;
     padding: 1vh;
@@ -26,6 +45,8 @@ p:hover .hidden, p:focus .hidden {
     visibility: visible;
 }
 
+
+/* style buttons */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -40,6 +61,8 @@ p:hover .hidden, p:focus .hidden {
     color: black;
 }
 
+
+/* dark mode */
 @media (prefers-color-scheme: dark){
     .textbox {
         color: white;
@@ -48,5 +71,12 @@ p:hover .hidden, p:focus .hidden {
     }
     body {
         background-color: darkslategray;
+    }
+}
+
+
+@media screen and (max-width: 770px) {
+    .hidden {
+        visibility: visible;
     }
 }
