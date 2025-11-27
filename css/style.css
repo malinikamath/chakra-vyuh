@@ -28,10 +28,17 @@ label {
   color: rgb(245, 245, 245);
   box-shadow: inset 0 0 8px #250228;
 }
+
+/* focus ring for keyboard users */
+:focus, a:focus img {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.8);
+}
+
 /* focus for input!! */
 #lockForm input:focus {
-  border-color: #9c27b0;
-  box-shadow: 0 0 8px #9c27b0;
+  border-color: #E5AEEF;
+  box-shadow: 0 0 8px #E5AEEF;
 }
 /* minor styling for unlock button on lock */
 #formSubmit {
@@ -41,11 +48,9 @@ label {
     color: rgb(245, 245, 245);
     margin-top: 2vh;
 }
-
-/* focus ring for keyboard users */
-:focus, a:focus img {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.8);
+#formSubmit:focus {
+  border-color: #E5AEEF;
+  box-shadow: 0 0 8px #E5AEEF;
 }
 
 /* blend action trigger buttons with text */
@@ -178,6 +183,11 @@ header .btn {
 
 /* dark mode styling */
 @media (prefers-color-scheme: dark){
+    /* focus ring for keyboard users */
+    :focus, a:focus img {
+        outline: none;
+       box-shadow: 0 0 0 3px rgba(229, 174, 239, 0.8);
+    }
     .textbox, .lb-data .lb-caption {
         color: white;
         background-color: black;
